@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: url('../assets/images/back.jpg') no-repeat center center/cover;
+  background-size: cover;
+  color: #333;
+}
+
+.text-light, .text {
+  text-align: justify; /* Justifies the text */
+}
+
+/* Navigation */
+header {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff63;
+  text-decoration: none;  /* Ensure no underline by default */
+  transition: text-decoration 0.3s ease;  /* Smooth transition for underline */
+}
+
+.navbar-brand:hover {
+  text-decoration: underline;  /* Underline on hover */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  background-color: rgb(0, 255, 153);
+  color: #000000;
+  text-decoration: underline;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+#hero .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+.btn22 {
+  background-color: #0000004c; /* Initial background color */
+  color: white;              /* Initial text color */
+  border: none;              /* Remove border */
+  padding: 10px 20px;        /* Padding for the button */
+  font-size: 16px;           /* Font size */
+  border-radius: 5px;        /* Rounded corners */
+  text-decoration: line-through;     /* Remove underline */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn22:hover {
+  background-color: #ff6600; /* Darker background on hover */
+  color: #000000;            /* Change text color on hover */
+  transform: translateY(-13px); /* Slightly lift the button */
+  text-decoration: overline; 
+  text-decoration: underline;
+  box-shadow: 10px 10px 8px rgb(0, 0, 0); /* Add shadow on hover */
+}
+
+#hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+#hero .btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+}
+
+/* About Section */
+#about {
+  padding: 5rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  background-image: url(../assets/images/yudhajit.png);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: white;
+  text-align: left;
+}
+
+
+#about img {
+  max-width: 20%;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #f9f9f9;
+}
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+
+/* Portfolio Section */
+#portfolio {
+  height: 100%;
+  padding: 5rem 0;
+  background: #f5f5f5;
+  text-align: center;
+  background: url('../assets/images/back.jpg') no-repeat center center/cover;
+  /* background-size: cover; */
+  margin-bottom: -100px;
+}
+
+#portfolio h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* Card Styles */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  border: none;
+  margin: 0 auto; /* Center the cards */
+  max-width: 280px; /* Limit card width */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ratio Styling */
+.ratio {
+  position: relative;
+  width: 100%;
+  padding-top: 177.78%; /* 9:16 Aspect Ratio */
+}
+
+.ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #000 !important;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.footer .btn-outline-light {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: 5px;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease
+}
+
+.footer .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #ff0606;
+}
+
+/* Remove underline for Quick Links */
+#footer .quick-links a {
+  text-decoration: none;
+}
+/* Default icon size */
+a i {
+  font-size: 1.3rem; /* Set the default size for all icons */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects for individual icons */
+a:hover i.fa-phone {
+  transform: scale(1.7); /* Enlarge the phone icon */
+  color: #007bff; /* Change to blue */
+}
+
+a:hover i.fa-whatsapp {
+  transform: scale(1.7); /* Enlarge the WhatsApp icon */
+  color: #25d366; /* Change to WhatsApp green */
+}
+
+a:hover i.fa-envelope {
+  transform: scale(1.7); /* Enlarge the mail icon */
+  color: #e10600; /* Change to red */
+}
+
+/* Ensure no underline on links */
+a {
+  text-decoration: none;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+  #about h2 {
+    font-size: 2rem;
+  }
+  #portfolio h2 {
+    font-size: 2rem;
+  }
+  #contact h2 {
+    font-size: 2rem;
+  }
+}
