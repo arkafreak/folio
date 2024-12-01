@@ -73,22 +73,27 @@
         <!-- Modal -->
         <div class="modal fade" id="testimonialModal" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="testimonialModalLabel">Testimonial Video</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-transparent border-0">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white" id="testimonialModalLabel">Testimonial Video</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
-                <!-- Local Video Embed -->
-                <video class="w-100" controls>
-                  <source src="assets/videos/Testimonial.mov" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+              <div class="modal-body d-flex justify-content-center align-items-center">
+                <!-- iPhone Screen Simulation -->
+                <div class="iphone-container">
+                  <div class="iphone-notch"></div>
+                  <div class="iphone-screen">
+                    <video class="w-100 h-100" controls>
+                      <source src="assets/videos/Testimonial.mov" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="iphone-home-button"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
 
 
         <div class="mt-3">
@@ -116,34 +121,66 @@
   box-shadow: 20px 20px 25px rgb(0, 0, 0);  /* Stronger shadow on hover */
   
 }
-/* Background Blur with Glassmorphism Effect */
-.modal-open .container {
-  /* filter: blur(8px); Stronger, smoother blur */
-  transition: filter 0.5s ease-in-out; /* Smoother transition */
-}
-
-/* Modal Dialog - Classy Entrance Effect */
-.modal-dialog {
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-  transform: scale(0.95); /* Start slightly smaller */
-  opacity: 0; /* Hidden initially */
-}
-
-/* Show Modal Dialog with Scale and Fade-In */
-.modal.show .modal-dialog {
-  transform: scale(1); /* Restore to normal size */
-  opacity: 1; /* Fully visible */
-}
-
-/* Optional - Modal Content with Soft Shadows and Rounded Corners */
-.modal-content {
-  backdrop-filter: blur(10px) saturate(150%); /* Glassmorphism */
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
-  border-radius: 15px; /* Smooth rounded corners */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Elegant shadow */
-  border: none; /* No border */
+/* iPhone Container */
+.iphone-container {
+  position: relative;
+  width: 300px;  /* Adjust width for different iPhone sizes */
+  height: 600px; /* Adjust height for different iPhone sizes */
+  background: #000;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  padding-top: 30px; /* Space for the notch */
 }
+
+/* iPhone Screen */
+.iphone-screen {
+  width: 90%;
+  height: 85%;
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* iPhone Notch */
+.iphone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 20px;
+  background: #000;
+  border-radius: 20px 20px 0 0;
+}
+
+/* iPhone Home Button */
+.iphone-home-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #222;
+  border-radius: 50%;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Make Modal Background Transparent */
+.modal-content {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+/* Close Button White */
+.btn-close-white {
+  filter: invert(1);
+}
+
 
 
 </style>
